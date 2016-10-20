@@ -24,5 +24,21 @@ chair.affiliation <- gsub(".*\\((.*)\\).*", "\\1",chairs)
 chairs_clean <- cbind(paper.id, chair.name, chair.affiliation)
 chairs_clean <- data.frame(chairs_clean)
 
+#Create IDs for unique chair + affiliation combinations
+chair.unique <- paste(chair.name,chair.affiliation)
+chairs_clean <- transform(chairs_clean, 
+                          chair.id=as.numeric(factor(chair.unique)))
+
+#Remove id from NA chairs
+chairs_clean[,4] <- gsub("1052","NA",chairs_clean[,4])
+
 #export table to csv
 write.csv(chairs_clean, file = "chairs_clean.csv", row.names=FALSE)
+
+#export chairs table
+write.csv(chairs_clean[2:4], 
+          file = "chairs_table.csv", row.names = FALSE)
+
+#export chairs and papers table
+write.csv(chairs_clean[-(2:3)],file = "chairs_papers.csv", row.names = FALSE)
+
