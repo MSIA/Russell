@@ -32,11 +32,14 @@ chairs_clean <- transform(chairs_clean,
 #Remove id from NA chairs
 chairs_clean[,4] <- gsub("1052","NA",chairs_clean[,4])
 
+#Remove duplicates from chairs table
+chairs_table <- chairs_clean[!duplicated(chairs_clean[,2:4]),2:4]
+
 #export table to csv
 write.csv(chairs_clean, file = "chairs_clean.csv", row.names=FALSE)
 
 #export chairs table
-write.csv(chairs_clean[2:4], 
+write.csv(chairs_table, 
           file = "chairs_table.csv", row.names = FALSE)
 
 #export chairs and papers table
