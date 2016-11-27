@@ -59,10 +59,10 @@ ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=2, id2word = dicti
 
 #RESULTS
 #>>> print(ldamodel.print_topics(num_topics=3, num_words=3))
-#[(0, '0.022*"simul" + 0.018*"model" + 0.013*"use"'), (1, '0.032*"simul" + 0.030*"model" + 0.015*"use"')]
+[(0, '0.022*"simul" + 0.018*"model" + 0.013*"use"'), (1, '0.032*"simul" + 0.030*"model" + 0.015*"use"')]
 #>>> print(ldamodel.print_topics(num_topics=5, num_words=3))
 #[(0, '0.022*"simul" + 0.018*"model" + 0.013*"use"'), (1, '0.032*"simul" + 0.030*"model" + 0.015*"use"')]
 #>>> print(ldamodel.print_topics(num_topics=5, num_words=5))
 #[(0, '0.022*"simul" + 0.018*"model" + 0.013*"use" + 0.012*"system" + 0.010*"time"'), (1, '0.032*"simul" + 0.030*"model" + 0.015*"use" + 0.010*"system" + 0.009*"base"')]
 #>>> print(ldamodel.print_topics(num_topics=5, num_words=10))
-#[(0, '0.022*"simul" + 0.018*"model" + 0.013*"use" + 0.012*"system" + 0.010*"time" + 0.008*"process" + 0.008*"product" + 0.008*"oper" + 0.007*"paper" + 0.006*"develop"'), (1, '0.032*"simul" + 0.030*"model" + 0.015*"use" + 0.010*"system" + 0.009*"base" + 0.008*"method" + 0.007*"paper" + 0.007*"can" + 0.007*"approach" + 0.007*"problem"')]
+[(0, '0.022*"simul" + 0.018*"model" + 0.013*"use" + 0.012*"system" + 0.010*"time" + 0.008*"process" + 0.008*"product" + 0.008*"oper" + 0.007*"paper" + 0.006*"develop"'), (1, '0.032*"simul" + 0.030*"model" + 0.015*"use" + 0.010*"system" + 0.009*"base" + 0.008*"method" + 0.007*"paper" + 0.007*"can" + 0.007*"approach" + 0.007*"problem"')]
